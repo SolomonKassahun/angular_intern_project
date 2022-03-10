@@ -1,0 +1,52 @@
+<form #userregister = "ngForm" (ngSubmit)="onSubmit()"   style="background-color: rgb(236, 236, 236);">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="firstName">First Name: </label>
+        <input name="firstName"  [(ngModel)]="userModel.firstName"  type="text" class="form-control" id="firstName" placeholder="first Name">
+      </div>
+      <!-- [(ngModel)]="firstName" -->
+    </div>
+    <div>
+      <div class="form-group col-md-6">
+        <label for="lastName">Last Name</label>
+        <input name="lastName"[(ngModel)]="userModel.lastName" type="text" class="form-control" id="lastName" placeholder="last Name">
+      </div>
+    </div>
+    <div class="form-group">
+        <div class="form-group col-md-6">
+            <label for="Username">Username: </label>
+            <input name="username" [(ngModel)]="userModel.username" type="text" class="form-control" id="Username" placeholder="Username">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="password">Password</label>
+            <input name="password" [(ngModel)]="userModel.password" type="text" class="form-control" id="password" placeholder="password">
+          </div>
+    </div>
+    <div class="form-group">
+        <div class="form-group col-md-6">
+            <label for="address">Address: </label>
+            <input name="address" [(ngModel)]="userModel.address" type="text" class="form-control" id="address" placeholder="address">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="phoneNumber">Phone Number: </label>
+            <input name="phoneNumber" [(ngModel)]="userModel.phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+          </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputState">Age</label>
+        <input name="age" [(ngModel)]="userModel.age"  type="text" class="form-control" id="age">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputZip">Zip</label>
+        <input name="zip" [(ngModel)]="userModel.zip" type="text" class="form-control" id="inputZip">
+      </div>
+    </div>
+    <div style="margin: 30px;">
+        <button type="submit" class="btn btn-primary btn-lg ">Submit</button> <br> <br>
+   
+    </div>
+  </form>
+  <footer>
+      <app-footer></app-footer>
+  </footer>

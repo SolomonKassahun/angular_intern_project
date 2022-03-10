@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="modal-body">
+       
+        <form #userlogin = "ngForm" (ngSubmit)="login()" action="" style="width: 400px;">
+          <div class="form-group " >
+            <label   for="username" class="form-control-label">User Name</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="loginInfo.username" value="" type="text" class="form-control" id="username" placeholder="username" required>
+          </div> 
+          <div style="width: 400px;" class="form-group">
+            <label for="password" class="form-control-label">Password</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="loginInfo.password" type="password" name="password" id="password" class="form-control" placeholder="password" required>
+          </div>
+          <input type="checkbox" class="" name="check" id="check"> Remember Me. <br> <br> 
+          <button type="submit" class="btn btn-success ">Login</button>
+    
+        </form>
+      </div>
+</div> 
+<footer>
+  <app-footer></app-footer>
+</footer>
+      

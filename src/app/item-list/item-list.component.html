@@ -1,0 +1,14 @@
+<div class="container">
+    <form #usercomment = "ngForm" (ngSubmit)="onSubmit()" style="width: 40%; margin: auto;">
+        <div class="form-group ">
+             <label for="fname">Name: </label> <br>
+             <input [(ngModel)]="itemModel.name" type="text" class="form-control" placeholder="enter first name" name="fname"> <br>
+             <label for="lname">Description: </label> <br>
+             <input [(ngModel)]="itemModel.description" type="text" class="form-control" name="lname" placeholder="enter last name"> <br>
+             <label for="subject">Price: </label> <br>
+             <input [(ngModel)]="itemModel.price" type="text" id="subject" name="subject" class="form-control">  <br>
+             
+             <button type="submit" class="btn btn-primary btn-lg ">Create Item</button> <br> <br>
+        </div>
+    </form>
+</div> <br> <br>

@@ -1,0 +1,148 @@
+<!-- 
+<div>
+  <div>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+        <mat-tab label="First"> Content 1 </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+      </mat-tab-group>
+    </div>
+</div> -->
+
+
+<div class="container">
+    <h3>Tabs</h3>
+    <ul class="nav nav-tabs">
+      <li id="commentListId" class="active"><a    routerLink='/admin'>Comment</a></li>
+      <li id="userListId"><a>Users</a></li>
+      <li id="itemsListId"><a >Items</a></li>
+      
+    </ul>
+    <br> <br>
+    <h1  id="mmm">Comments</h1>
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>FirstName</th>
+          <th>Lastname</th>
+          <th>Subject</th>
+          <th>Message</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="for let comment of getComm | async ">
+          <td>{{comment.firstName}}</td>
+          <td>{{comment.lastName}}</td>
+          <td>{{comment.subject}}</td>
+          <td>{{comment.message}}</td>
+          <td > 
+            <button>
+              <span class="glyphicon glyphicon-edit"></span>
+            </button> &nbsp; &nbsp; 
+            <button (click)="deleteItem(comment.commentId)">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+             </td>
+         
+        </tr>
+       
+      </tbody>
+    </table> <br> <br>
+
+    <h1>Users</h1>
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>FirstName</th>
+          <th>Lastname</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>PhoneNumber</th>
+          <th>Zip</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="for let user of getUser | async ">
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.address}}</td>
+          <td>{{user.phoneNumber}}</td>
+          <td>{{user.zip}}</td>
+          <td > 
+            <button>
+              <span class="glyphicon glyphicon-edit"></span>
+            </button> &nbsp; &nbsp; 
+            <button>
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+             </td>
+          
+          
+         
+        </tr>
+       
+      </tbody>
+    </table> <br> <br>
+    <h1>Items</h1>
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>price</th>
+          <th>Edit</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="for let item of getItem | async ">
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.price}}</td>
+          <td > 
+            <button>
+              <span class="glyphicon glyphicon-edit"></span>
+            </button> &nbsp; &nbsp; 
+            <button>
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+             </td>
+          
+         
+        </tr>
+       
+      </tbody>
+    </table> 
+
+
+
+
+    
+    <script>
+        function WebisteList(){
+            var commList = document.getElementById("commentListId");
+            var userList = document.getElementById("userListId");
+            var itemsListId = document.getElementById("itemsListId");
+
+        }
+        // if(commonList){
+        //   document.getElementById('mmm').innerHTML = 'comment list';
+        // } else if(userList){
+        //       document.getElementById('mmm').innerHTML = ' user list';
+        // } else{
+        //     document.getElementById('mmm').innerHTML = 'items list';
+        // }
+
+       
+        document.getElementById("commentListId").addEventListener("click", displayDate);
+        document.getElementById("userListId").addEventListener("click", displayData);
+        function displayDate(){
+          document.getElementById("mmm").innerHTML = Date();
+        }
+        function displayData()
+    </script>
+    
+  </div>

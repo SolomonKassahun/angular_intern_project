@@ -1,0 +1,19 @@
+<div class="card" *ngFor="for let item of Items | async " style="display: inline-block;">
+    <h5 class="card-header">{{item.name}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">price: {{item.price}}</h5>
+      <p class="card-text">{{item.description}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <!-- <div class="card" *ngFor="for let item of Items | async " style="display: inline-block;">
+    <div class="card-header">
+        {{item.name}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{item.description}}</p>
+        <footer class="blockquote-footer">price: {{item.price}} </footer>
+      </blockquote>
+    </div>
+  </div> -->
